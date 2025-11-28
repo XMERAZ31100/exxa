@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión - Login</title>
+    <meta name="description" content="Sistema de gestión con control de versiones y roles de usuario">
+    <meta name="keywords" content="login, sistema, gestión, roles, admin">
+    
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #f3b8d2;
+            --secondary-color: #fce4ec;
+            --accent-color: #e91e63;
+            --dark-pink: #d17a9e;
+            --text-dark: #4a4a4a;
+            --bg-light: #fff5f8;
+        }
+    }
+
+    @layer base {
+        body {
+            @apply bg-[var(--bg-light)] text-[var(--text-dark)];
+        }
+    }
+
+    @layer components {
+        .btn-primary {
+            @apply bg-[var(--primary-color)] hover:bg-[var(--dark-pink)] text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg;
+        }
+        
+        .input-field {
+            @apply w-full px-4 py-3 border-2 border-[var(--primary-color)] rounded-lg focus:outline-none focus:border-[var(--accent-color)] transition-all duration-300 bg-white;
+        }
+        
+        .card-glass {
+            @apply bg-white bg-opacity-80 backdrop-blur-sm rounded-2xl shadow-xl;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel" src="components/LoginForm.js"></script>
+    <script type="text/babel" src="utils/auth.js"></script>
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>

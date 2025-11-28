@@ -1,0 +1,47 @@
+[
+  {
+    "name": "user",
+    "fields": [
+      {
+        "name": "Username",
+        "type": "text",
+        "description": "Username for login",
+        "options": null
+      },
+      {
+        "name": "Password",
+        "type": "text",
+        "description": "User password",
+        "options": null
+      },
+      {
+        "name": "Role",
+        "type": "text",
+        "description": "User role",
+        "options": [
+          "superuser",
+          "admin",
+          "user"
+        ]
+      },
+      {
+        "name": "FullName",
+        "type": "text",
+        "description": "Full name of user",
+        "options": null
+      },
+      {
+        "name": "Email",
+        "type": "text",
+        "description": "Email address",
+        "options": null
+      },
+      {
+        "name": "Version",
+        "type": "text",
+        "description": "System version",
+        "options": null
+      }
+    ]
+  }
+]

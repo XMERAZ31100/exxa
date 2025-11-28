@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Sistema de Gestión</title>
+    
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #f3b8d2;
+            --secondary-color: #fce4ec;
+            --accent-color: #e91e63;
+            --dark-pink: #d17a9e;
+            --text-dark: #4a4a4a;
+            --bg-light: #fff5f8;
+            --sidebar-width: 260px;
+        }
+    }
+
+    @layer base {
+        body {
+            @apply bg-[var(--bg-light)] text-[var(--text-dark)];
+        }
+    }
+
+    @layer components {
+        .sidebar-item {
+            @apply flex items-center gap-3 px-4 py-3 rounded-lg cursor-pointer transition-all duration-300 hover:bg-[var(--secondary-color)] text-[var(--text-dark)];
+        }
+        
+        .sidebar-item-active {
+            @apply bg-[var(--primary-color)] text-white;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel" src="utils/auth.js"></script>
+    <script type="text/babel" src="components/Sidebar.js"></script>
+    <script type="text/babel" src="components/Topbar.js"></script>
+    <script type="text/babel" src="components/DashboardView.js"></script>
+    <script type="text/babel" src="components/ProfileView.js"></script>
+    <script type="text/babel" src="components/SettingsView.js"></script>
+    <script type="text/babel" src="dashboard-app.js"></script>
+</body>
+</html>
